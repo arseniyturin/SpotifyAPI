@@ -45,7 +45,7 @@ class SpotifyAPI:
         # client id and client secret are given by Spotify when App is registered
         self.client_id  = client_id
         self.client_secret = client_secret
-        credentials = "{}:{}".format(self.client_id, self.client_secret)
+        credentials = f"{self.client_id}:{self.client_server}"
         # credentials must be encoded to base64 and included to the request header
         credentials_b64 = base64.b64encode(credentials.encode()).decode()
 
